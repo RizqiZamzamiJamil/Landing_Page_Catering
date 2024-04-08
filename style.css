@@ -1,0 +1,493 @@
+:root {
+    --primary: #e58c33;
+    --bg: white;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--bg);
+    color: black;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 7%;
+    background-color: var(--bg);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+}
+
+.navbar .navbar-logo {
+    font-family: "Yellowtail";
+    font-size: 2rem;
+    font-weight: 700;
+    color: black;
+    font-style: italic;
+}
+
+.navbar .navbar-logo span {
+    color: var(--primary);
+}
+
+.navbar .navbar-nav a {
+    color: black;
+    display: inline-block;
+    font-size: 1.3rem;
+    margin: 0 1rem;
+}
+
+.navbar .navbar-nav a:hover {
+    color: var(--primary);
+}
+
+.navbar .navbar-nav a::after {
+    content: '';
+    display: block;
+    padding-bottom: 0.5rem;
+    border-bottom: 0.2rem solid var(--primary);
+    transform: scaleX(0);
+    transition: 0.2s linear;
+}
+
+.navbar .navbar-nav a:hover::after {
+    transform: scaleX(0.5);
+}
+
+.navbar-hamburger {
+    display: none;
+    font-size: 1.6rem;
+    cursor: pointer;
+}
+
+/* Sidebar */
+.sidebar {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    background-color: var(--bg);
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.sidebar a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 1.5rem;
+    color: black;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidebar a:hover {
+    color: var(--primary);
+}
+
+.sidebar .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 2rem;
+    margin-left: 50px;
+}
+
+/* Hero */
+.hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://awsimages.detik.net.id/community/media/visual/2022/11/20/rijsttafel-indonesia-2.jpeg?w=1200');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    text-align: center;
+    color: white;
+}
+
+.hero-content {
+    max-width: 600px;
+    margin: auto;
+    }
+
+.hero-content h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    color: white;
+    font-family: 'Yellowtail', cursive;
+    margin-bottom: 10px;
+}
+
+.hero-content p {
+    font-size: 1.5rem;
+    padding: 0 1rem;
+    font-weight: 400;
+    color: white;
+    margin-bottom: 10px;
+}
+
+.hero-content small {
+    font-size: 1rem;
+    font-weight: 300;
+    color: white;
+}
+
+.hero-content input[type="text"] {
+    padding: 8px;
+    margin-right: 8px;
+    width: 250px;
+    border-radius: 0.5rem;
+}
+
+.hero-content button {
+    padding: 8px 16px;
+    background-color: var(--primary);
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 0.5rem;
+}
+
+/* About */
+.about,
+.menu,
+.review,
+.contact {
+    padding: 2rem 7% 1.4rem;
+}
+
+.about h2,
+.menu h2,
+.review h2,
+.contact h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 3rem;
+}
+
+.about h2 span,
+.menu h2 span,
+.review h2 span,
+.contact h2 span {
+    color: var(--primary);
+}
+
+.about .content {
+    flex: 1 1 35rem;
+    padding: 0 1rem;
+}
+
+.about .content p {
+    margin-bottom: 0.8rem;
+    font-size: 1rem;
+    opacity: 0.4;
+    line-height: 1.6;
+    text-align: center;
+}
+
+.about .abouts {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 2rem;
+}
+
+.about .box {
+    flex: 1 1 30%;
+    margin: 0 1rem;
+    text-align: center;
+}
+
+.about .box img {
+    width: 100%;
+    border-radius: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.about .box h3 {
+    font-size: 1.5rem;
+    color: var(--primary);
+    margin-bottom: 0.5rem;
+}
+
+.about .box p {
+    font-size: 1rem;
+    opacity: 0.4;
+    line-height: 1.4;
+}
+
+/* Menu */
+.menu .menus {
+    padding: 2rem 7% 1.4rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+
+.menu-item {
+    width: 23%;
+    margin-bottom: 2rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 0.5rem;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.menu-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.menu-item h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin: 1rem;
+    flex: 1;
+}
+
+.menu-item .harga {
+    display: block;
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--primary);
+    margin: 0 1rem 1rem;
+}
+
+/* Review */
+.review h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 3rem;
+}
+
+.review h2 span {
+    color: var(--primary);
+}
+
+.reviews {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.review-box {
+    width: 48%;
+    margin-bottom: 2rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 0.5rem;
+    padding: 1.5rem;
+}
+
+.review-box p.quote {
+    font-style: italic;
+    margin-bottom: 1rem;
+}
+
+.review-box p.customer-name {
+    text-align: right;
+    margin-top: 1rem;
+    font-weight: bold;
+    color: var(--primary);
+}
+
+/* Hubungi Kami */
+.contact-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+iframe {
+    height: 375px;
+}
+
+.map-container {
+    width: 48%;
+    max-width: 600px;
+    margin-top: 30px;
+}
+
+.contact-form {
+    width: 48%;
+    max-width: 600px;
+    margin-top: 20px;
+}
+
+.contact-form h3 {
+    font-size: 1.8rem;
+    color: var(--primary);
+    margin-bottom: 15px;
+}
+
+.contact-form form {
+    display: grid;
+    gap: 15px;
+}
+
+.contact-form label {
+    display: block;
+    font-size: 1rem;
+    margin-bottom: 8px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.contact-form button {
+    padding: 10px 20px;
+    background-color: var(--primary);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: white;
+    color: black;
+    border: 1px solid black;
+}
+
+
+/* Footer */
+footer {
+    background-color: var(--primary);
+    text-align: center;
+    padding: 1rem 0 3rem;
+    margin-top: 3rem;
+}
+
+footer .links a:hover {
+    color: var(--bg);
+}
+
+footer .links {
+    margin-bottom: 1.4rem;
+}
+
+footer .links a {
+    color: #fff;
+    padding: 0.7rem 1rem;
+}
+
+footer .credit a {
+    color: var(--bg);
+    font-weight: 700;
+}
+
+/* Responsif */
+@media screen and (max-width: 768px) {
+    .navbar {
+        padding: 1rem 5%;
+    }
+
+    .navbar .navbar-logo {
+        font-size: 1.8rem;
+    }
+
+    .navbar .navbar-nav {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        background-color: var(--bg);
+        z-index: 999;
+    }
+
+    .navbar.active .navbar-nav {
+        display: flex;
+    }
+
+    .navbar .navbar-nav a {
+        display: block;
+        padding: 0.5rem 0;
+        text-align: center;
+        border-bottom: 1px solid #ccc;
+    }
+}
+
+/* Tablet */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero-content p {
+        font-size: 1.3rem;
+    }
+
+    .menu-item {
+        width: 48%;
+    }
+}
+
+/* Mobile */
+@media screen and (max-width: 768px) {
+    .navbar .navbar-hamburger {
+        display: flex;
+    }
+
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+
+    .hero-content p {
+        font-size: 1.2rem;
+    }
+
+    .menu-item {
+        width: 100%;
+    }
+
+    .about .abouts {
+        flex-direction: column;
+    }
+
+    .about .box {
+        margin: 1rem 0;
+    }
+
+    .review-box {
+        width: 100%;
+    }
+
+    .contact-container {
+        flex-direction: column;
+    }
+
+    .map-container,
+    .contact-form {
+        width: 100%;
+        max-width: none;
+        margin-top: 20px;
+    }
+}
